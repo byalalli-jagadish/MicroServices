@@ -1,0 +1,16 @@
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+server:
+  port: 8761
+spring:
+  application:
+    name: AMAZON-SERVER
+    
+    
+#Runs on port 8761
+
+#Acts as a service registry
+
+#Other services register themselves here

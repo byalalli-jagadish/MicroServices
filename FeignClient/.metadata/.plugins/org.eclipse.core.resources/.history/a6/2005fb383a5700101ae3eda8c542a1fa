@@ -1,0 +1,21 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@RestController
+@EnableFeignClients
+public class SpringCloudFeignApplication {
+	@Autowired
+	private UserClient client;
+
+	@GetMapping("/findAllUser")
+	public List<UserResponse> getAllUser() {
+		return client.getUsers();
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringCloudFeignApplication.class, args);
+	}
+}

@@ -1,0 +1,16 @@
+server:
+  port: 9090
+
+spring:
+  cloud:
+    loadbalancer:
+      clients:
+        chatbook:
+          instances:
+            - uri: http://localhost:8081
+            - uri: http://localhost:8082
+            - uri: http://localhost:8083
+
+  main:
+    allow-circular-references: true
+            

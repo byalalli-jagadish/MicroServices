@@ -1,0 +1,2 @@
+spring.application.name=chatbook
+server.port=8083
